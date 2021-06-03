@@ -47,5 +47,5 @@ export async function getStaticProps() {
   //   },
   // };
   const recipes = await sanityClient.fetch(recipesQuery);
-  return { props: { recipes } };
+  return { props: { recipes }, revalidate: 10 };
 }
